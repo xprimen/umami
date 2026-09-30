@@ -1,29 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "services": {
-    "app": {
-      "root": ".",
-      "framework": "nextjs",
-      "installCommand": "npx --yes pnpm@12.3.4 install --frozen-lockfile",
-    },
-    "mcp": {
-      "root": "packages/mcp",
-      "runtime": "node",
-      "buildCommand": "pnpm run build"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/mcp/(.*)",
-      "destination": {
-        "service": "mcp"
-      }
-    },
-    {
-      "source": "/(.*)",
-      "destination": {
-        "service": "app"
-      }
-    }
-  ]
+  "installCommand": "npx --yes pnpm@12.3.4 install --frozen-lockfile"
 }
+
